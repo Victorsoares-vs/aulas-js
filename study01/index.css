@@ -22,7 +22,7 @@ h2 {
 
 #increment-btn {
     background-color: red;
-    border: none;
+    border: white solid 2px;
     color: white;
     padding: 15px 32px;
     text-align: center;
@@ -31,6 +31,36 @@ h2 {
     border-radius: 10px;
     font-size: 16px;
     margin: 4px 2px;
+    cursor: pointer;
+}
+
+#reset-btn {
+    background-color: red;
+    border: white solid 2px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    border-radius: 10px;
+    font-size: 16px;
+    margin: auto;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#save-btn {
+    background-color: green;
+    border: white solid 2px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    border-radius: 10px;
+    font-size: 16px;
+    margin: auto;
+    margin-top: 20px;
     cursor: pointer;
 }
 

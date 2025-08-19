@@ -1,9 +1,26 @@
 let count = 0
 
 function increment() {
-    console.log("The button was clicked")
+    let totalcount = (count = count +1)
+    console.log(totalcount)
+    document.getElementById("count-el").innerText = totalcount
 }
-increment()
+
+function reset() {
+    count = 0
+    document.getElementById("count-el").innerText = 0
+}
+
+function save() {
+    console.log(count)
+}
+
+
+
+
+
+
+
 
 
 
