@@ -67,3 +67,11 @@ function divide() {
     let divide = num1 / num2 
     let sumEl = document.getElementById("sum-el").textContent = 'Sum: ' + divide
 }
+
+//exercício 04
+
+let firstCard = 4
+let secondCard = 8
+let sum = firstCard + secondCard
+
+
