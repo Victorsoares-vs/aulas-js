@@ -1,53 +1,65 @@
-//EXERCISE 01
+//EXERCISE 01 - JOGO DE BLACKJACK
 
-let firstCard = getRandomCard() 
-let secondCard = getRandomCard()
-let cards = [firstCard, secondCard] // array = ordered list
-let sum = firstCard + secondCard 
+
+let cards = [] // array = ordered list
+let sum = 0
 let hasBlackJack = false
-let isAlive = true
+let isAlive = false
 let message = ""
 let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el") //Ao invés do 'getElement', poderíamos usar o 'querySelector', que combina o ID com classe, ou com qualquer outra coisa. pra Classe, usa-se o '.' na frente, igual ao CSS. Pra Id, se usa a hashtag, e pra outros elementos, é só jogar o nome dele aqui. É um método mais abrangente.
 let cardsEl = document.getElementById("cards-el")
 
-console.log(messageEl)
-
 function getRandomCard() {
-  return 5
+  let randomNumber = Math.floor(Math.random() * 13) + 1
+  if (randomNumber === 1) {
+    return 11
+  } else if (randomNumber > 10) {
+    return 10
+  } else {
+    return randomNumber
+  }
 }
 
 function startGame() {
-  renderGame()
+  if (sum === 0 || sum >= 21) {
+    isAlive = true
+    let firstCard = getRandomCard()
+    let secondCard = getRandomCard()
+    cards = [firstCard, secondCard]
+    sum = firstCard + secondCard
+
+    renderGame()
+  }
 }
 
 function renderGame() {
   if (sum <= 20) {
-    message = "Do you want a new card?"
+    message = "Quer uma nova carta?"
   } else if (sum === 21) {
-    message = "You've got BlackJack!"
+    message = "Parabéns, você tem BlackJack!"
     hasBlackJack = true
   } else {
-    message = "You're out of the game!"
+    message = "Estourou! Você perdeu essa."
     isAlive = false
   }
-
   messageEl.textContent = (message)
-  sumEl.textContent = ("Sum: " + sum)
-  cardsEl.textContent = ("Cards: " )
-
-  for (let i = 0; i < cards.length; i ++) {
+  sumEl.textContent = ("Total: " + sum)
+  cardsEl.textContent = ("Cartas: ")
+  for (let i = 0; i < cards.length; i++) {
     cardsEl.textContent += cards[i] + " "
   }
 }
 
 function newCard() {
-  console.log("Drawing a new card from the Deck")
-  let card = getRandomCard()
-  cards.push(card)
-  sum += card
-  renderGame()
+  if (isAlive === true && hasBlackJack === false) {
+    let card = getRandomCard()
+    cards.push(card)
+    sum += card
+    renderGame()
+  }
 }
+
 
 //EXERCISE 02
 

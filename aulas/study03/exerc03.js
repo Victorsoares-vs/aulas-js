@@ -42,17 +42,48 @@ messages.pop() // remove o último elemento do array
   //  greetingEl.textContent += (sentence[i]) + " " //o + " " aqui, já vai fazer com que cada item do array seja exibido com seu respectivo espaço.
 //}
 
-let player1Time = 102
-let player2Time = 107
+// EXERCISE 02 - FUNCTION RETURN
 
-function totalRaceTime() {
-  return player1Time + player2Time
-}
+//let player1Time = 102
+//let player2Time = 107
 
-let totalTime = totalRaceTime()
-console.log(totalTime)
+//function totalRaceTime() {
+  //return player1Time + player2Time
+//}
+
+//let totalTime = totalRaceTime()
+//console.log(totalTime)
 
  
+//EXERCISE 03 - RANDOM NUMBERS
+
+// Gerando com 'Math.random()'
+
+//let randomNumber = Math.random() * 6
+
+//console.log(randomNumber) // Retorna números em formato decimal, mas todos abaixo de "1"
+// Quando se adiciona um multiplicador à função 'Math.random()', ela assume os valores entre 0 e o nº usado no multiplicador.
+//Ou seja, se o multiplicador for 6, os valores gerados estarão entre 0 e 6.
+
+// Usando 'Math.floor()'
+
+//let flooredNumber = Math.floor()
+//console.log(flooredNumber) //Retorna números naturais ignorando as casas decimais.
+
+//COMBINANDO OS DOIS USOS: "Math.random" e "Math.floor"
+
+let randomNumber = Math.floor(Math.random() * 6) + 1 
+//console.log(randomNumber) // Ao se inserir um elemento dentro do outro, ele realiza a operação do primeiro elemento e faz a conversão removendo as casas decimais  para exibir o resultado final.
+// Você pode colocar mais termos para atinigir o resultado desejado após o 'Math.floor': +1, +2, etc.
+
+function rollDice() {
+  return randomNumber
+}
+
+
+
+
+
 
 
 
