@@ -2,22 +2,6 @@
 
 
 let cards = [] // Array = ordered list
-//let cartas = [
-//  caard1 = { titulo: "as", valor: 11 },
-//  caard2 = { titulo: "dois", valor: 2 },
-//  caard3 = { titulo: "três", valor: 3 },
-//  caard4 = { titulo: "quatro", valor: 4 },
-//  caard5 = { titulo: "cinco", valor: 5 },
-//  caard6 = { titulo: "seis", valor: 6 },
-//  caard7 = { titulo: "sete", valor: 7 },
-//  caard8 = { titulo: "oito", valor: 8 },
-//  caard9 = { titulo: "nove", valor: 9 },
-//  caard10 = { titulo: "dez", valor: 10 },
-//  caard11 = { titulo: "valete", valor: 11 },
-//  caard12 = { titulo: "dama", valor: 12 },
-//  caard13 = { titulo: "rei", valor: 13 }
-//]
-
 let sum = 0
 let hasBlackJack = false
 let isAlive = false
@@ -50,7 +34,6 @@ function startGame() {
     let secondCard = getRandomCard()
     cards = [firstCard, secondCard]
     sum = firstCard + secondCard
-    //let atributo = (" Saiu um " + cartas[firstCard - 1].titulo + " e um " + cartas[secondCard - 1].titulo + " e o valor foi de: " + cartas[4].valor)
     renderGame()
   }
 }
