@@ -1,0 +1,29 @@
+* {
+    margin: 0px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --color: #5f9341;
+}
+
+input {
+    padding: 10px;
+    width: 100%; /* quando você quer preencher tudo da pagina */
+    box-sizing: border-box; /* Quando um elemento está em 100%, as vezes ele vai passar da página. esse comando mantém tudo dentro da página organizadinho. */
+    border-color: var(--color);
+    border-style: solid;
+    border-width: 1.3px;
+}
+
+button {
+    display: block;
+    margin-top: 5px;
+    background-color: var(--color);
+    color: white;
+    font-weight: bolder;
+    border: none;
+    padding: 10px 20px;
+
+}
