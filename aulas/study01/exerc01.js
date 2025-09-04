@@ -42,8 +42,8 @@ function message() {
 }
 console.log(erro)
 
-let num1 = 8
-let num2 = 2
+let num1 = 15
+let num2 = 52
 document.getElementById("num1-el").textContent = num1
 document.getElementById("num2-el").textContent = num2
 
