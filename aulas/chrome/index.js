@@ -3,6 +3,10 @@ const inputBtn = document.getElementById("input-btn")
 const inputEl = document.getElementById("input-el")
 const ulEl = document.getElementById("ul-el")
 
+let nick = localStorage.getItem("nickname")
+console.log(nick)
+localStorage.clear()
+
 inputBtn.addEventListener("click", function () {
     myLeads.push(inputEl.value)
     renderLeads()
