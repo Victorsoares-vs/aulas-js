@@ -2,6 +2,7 @@
 
 
 let cards = [] // Array = ordered list
+let cmptChips = [] 
 let sum = 0
 let hasBlackJack = false
 let isAlive = false
@@ -9,12 +10,30 @@ let message = ""
 let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el") //Ao invés do 'getElement', poderíamos usar o 'querySelector', que combina o ID com classe, ou com qualquer outra coisa. pra Classe, usa-se o '.' na frente, igual ao CSS. Pra Id, se usa a hashtag, e pra outros elementos, é só jogar o nome dele aqui. É um método mais abrangente.
 let cardsEl = document.getElementById("cards-el")
-let player = {
-  name: "Victor",
-  chips: 1000
+let player = []
+let playerEl = document.getElementById("alias")
+let vamos = document.getElementById("str-el")
+const plrEl = document.getElementById("player-el")
+
+vamos.addEventListener("click", function () {
+  player.push(playerEl.value)
+  console.log(player)
+  localStorage.setItem("player", JSON.stringify(player))
+  prepareGame()
+
+})
+
+function prepareGame() {
+  let listItems = ""
+  for (i = 0; i < player.length; i++) {
+    listItems += `
+     <li>
+       Jogador(a): ${player[i]} Qtd de Fichas: R$ 1.000,00 
+    </li>`
+  }
+  plrEl.innerHTML = listItems
 }
-let playerEl = document.getElementById("player-el")
-playerEl.textContent = (player.name + ": R$ " + player.chips)
+
 
 function getRandomCard() {
   let randomNumber = Math.floor(Math.random() * 13) + 1
@@ -63,6 +82,13 @@ function newCard() {
     sum += card
     renderGame()
   }
+}
+
+function stop() {
+    for(i=0; i < 3; i++) {
+      getRandomCard()
+
+    }
 }
 
 
